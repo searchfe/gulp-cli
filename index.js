@@ -83,7 +83,8 @@ cli.on('respawn', function(flags, child) {
   log.info('Respawned to PID:', pid);
 });
 
-function run() {
+function run(options = {}) {
+  opts = Object.assign(opts, options);
   cli.prepare({
     cwd: opts.cwd,
     configPath: opts.gulpfile,
