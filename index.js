@@ -86,7 +86,7 @@ cli.on('respawn', function(flags, child) {
 function run(options = {}) {
   opts.gulpfile = opts.gulpfile || options.gulpfile;
   opts.cwd = opts.cwd || options.cwd;
-  opts._.pop();
+  opts._.shift();
   cli.prepare({
     cwd: opts.cwd,
     configPath: opts.gulpfile,
